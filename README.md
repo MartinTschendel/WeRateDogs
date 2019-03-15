@@ -8,3 +8,11 @@ Wrangle and Analyze the data from the Twitter WeRateDogs
 2019-03-12: Solved the following issues:
 * Not every value of the column 'rating_denominator' has value 10
 * each variable forms a column: rating_numerator and rating_denominator are actually one variable but separated in two columns (should be merged, ideally e.g. 8/10)
+
+2019-03-13: Solved the following issues:
+* datatype of p1, p2 and p3 is object and not category
+* data type of column 'timestamp' is object and not datetime
+
+2019-03-14: work in progress:
+* dogs sometimes are in two dog stages
+* each variable forms a column: for dog stage, there are four columns, they should be merged to one column called 'dog_stage' (datatype: category with values: None, doggo, floofer, pupper, puppo)
