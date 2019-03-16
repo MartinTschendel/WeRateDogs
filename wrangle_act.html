@@ -11781,7 +11781,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[430]:</div>
+<div class="prompt input_prompt">In&nbsp;[395]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import required libraries</span>
@@ -11796,7 +11796,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[431]:</div>
+<div class="prompt input_prompt">In&nbsp;[396]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/twitter-archive-enhanced.csv&#39;</span><span class="p">)</span>
@@ -11809,7 +11809,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[432]:</div>
+<div class="prompt input_prompt">In&nbsp;[397]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#this is only option b, ideally with requests library</span>
@@ -11824,158 +11824,26 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[398]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># read in file with requests library</span>
-<span class="kn">import</span> <span class="nn">io</span>
+<span class="c1">#import io</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://d17h27t6h515a5.cloudfront.net/topher/2017/August/599fd2ad_image-predictions/image-predictions.tsv&quot;</span>
-<span class="n">s</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">content</span>
-<span class="n">df_image1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)),</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span> 
-<span class="n">df_image1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="c1">#url = &quot;https://d17h27t6h515a5.cloudfront.net/topher/2017/August/599fd2ad_image-predictions/image-predictions.tsv&quot;</span>
+<span class="c1">#s = requests.get(url).content</span>
+<span class="c1">#df_image1 = pd.read_csv(io.StringIO(s.decode(&#39;utf-8&#39;)), sep=&#39;\t&#39;) </span>
+<span class="c1">#df_image1.head()</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">TimeoutError</span>                              Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\urllib3\connection.py</span> in <span class="ansi-cyan-fg">_new_conn</span><span class="ansi-blue-intense-fg ansi-bold">(self)</span>
-<span class="ansi-green-fg">    158</span>             conn = connection.create_connection(
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 159</span><span class="ansi-yellow-intense-fg ansi-bold">                 (self._dns_host, self.port), self.timeout, **extra_kw)
-</span><span class="ansi-green-fg">    160</span> 
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\urllib3\util\connection.py</span> in <span class="ansi-cyan-fg">create_connection</span><span class="ansi-blue-intense-fg ansi-bold">(address, timeout, source_address, socket_options)</span>
-<span class="ansi-green-fg">     79</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> err <span class="ansi-green-intense-fg ansi-bold">is</span> <span class="ansi-green-intense-fg ansi-bold">not</span> <span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 80</span><span class="ansi-yellow-intense-fg ansi-bold">         </span><span class="ansi-green-intense-fg ansi-bold">raise</span> err
-<span class="ansi-green-fg">     81</span> 
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\urllib3\util\connection.py</span> in <span class="ansi-cyan-fg">create_connection</span><span class="ansi-blue-intense-fg ansi-bold">(address, timeout, source_address, socket_options)</span>
-<span class="ansi-green-fg">     69</span>                 sock<span class="ansi-yellow-intense-fg ansi-bold">.</span>bind<span class="ansi-yellow-intense-fg ansi-bold">(</span>source_address<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 70</span><span class="ansi-yellow-intense-fg ansi-bold">             </span>sock<span class="ansi-yellow-intense-fg ansi-bold">.</span>connect<span class="ansi-yellow-intense-fg ansi-bold">(</span>sa<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">     71</span>             <span class="ansi-green-intense-fg ansi-bold">return</span> sock
-
-<span class="ansi-red-intense-fg ansi-bold">TimeoutError</span>: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
-
-During handling of the above exception, another exception occurred:
-
-<span class="ansi-red-intense-fg ansi-bold">NewConnectionError</span>                        Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\urllib3\connectionpool.py</span> in <span class="ansi-cyan-fg">urlopen</span><span class="ansi-blue-intense-fg ansi-bold">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, **response_kw)</span>
-<span class="ansi-green-fg">    599</span>                                                   body<span class="ansi-yellow-intense-fg ansi-bold">=</span>body<span class="ansi-yellow-intense-fg ansi-bold">,</span> headers<span class="ansi-yellow-intense-fg ansi-bold">=</span>headers<span class="ansi-yellow-intense-fg ansi-bold">,</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 600</span><span class="ansi-yellow-intense-fg ansi-bold">                                                   chunked=chunked)
-</span><span class="ansi-green-fg">    601</span> 
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\urllib3\connectionpool.py</span> in <span class="ansi-cyan-fg">_make_request</span><span class="ansi-blue-intense-fg ansi-bold">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="ansi-green-fg">    342</span>         <span class="ansi-green-intense-fg ansi-bold">try</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 343</span><span class="ansi-yellow-intense-fg ansi-bold">             </span>self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_validate_conn<span class="ansi-yellow-intense-fg ansi-bold">(</span>conn<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    344</span>         <span class="ansi-green-intense-fg ansi-bold">except</span> <span class="ansi-yellow-intense-fg ansi-bold">(</span>SocketTimeout<span class="ansi-yellow-intense-fg ansi-bold">,</span> BaseSSLError<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-green-intense-fg ansi-bold">as</span> e<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\urllib3\connectionpool.py</span> in <span class="ansi-cyan-fg">_validate_conn</span><span class="ansi-blue-intense-fg ansi-bold">(self, conn)</span>
-<span class="ansi-green-fg">    838</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> <span class="ansi-green-intense-fg ansi-bold">not</span> getattr<span class="ansi-yellow-intense-fg ansi-bold">(</span>conn<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;sock&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>  <span class="ansi-red-intense-fg ansi-bold"># AppEngine might not have  `.sock`</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 839</span><span class="ansi-yellow-intense-fg ansi-bold">             </span>conn<span class="ansi-yellow-intense-fg ansi-bold">.</span>connect<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    840</span> 
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\urllib3\connection.py</span> in <span class="ansi-cyan-fg">connect</span><span class="ansi-blue-intense-fg ansi-bold">(self)</span>
-<span class="ansi-green-fg">    300</span>         <span class="ansi-red-intense-fg ansi-bold"># Add certificate verification</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 301</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>conn <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_new_conn<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    302</span>         hostname <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>host
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\urllib3\connection.py</span> in <span class="ansi-cyan-fg">_new_conn</span><span class="ansi-blue-intense-fg ansi-bold">(self)</span>
-<span class="ansi-green-fg">    167</span>             raise NewConnectionError(
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 168</span><span class="ansi-yellow-intense-fg ansi-bold">                 self, &#34;Failed to establish a new connection: %s&#34; % e)
-</span><span class="ansi-green-fg">    169</span> 
-
-<span class="ansi-red-intense-fg ansi-bold">NewConnectionError</span>: &lt;urllib3.connection.VerifiedHTTPSConnection object at 0x000002A854EDB080&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
-
-During handling of the above exception, another exception occurred:
-
-<span class="ansi-red-intense-fg ansi-bold">MaxRetryError</span>                             Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\requests\adapters.py</span> in <span class="ansi-cyan-fg">send</span><span class="ansi-blue-intense-fg ansi-bold">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="ansi-green-fg">    448</span>                     retries<span class="ansi-yellow-intense-fg ansi-bold">=</span>self<span class="ansi-yellow-intense-fg ansi-bold">.</span>max_retries<span class="ansi-yellow-intense-fg ansi-bold">,</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 449</span><span class="ansi-yellow-intense-fg ansi-bold">                     </span>timeout<span class="ansi-yellow-intense-fg ansi-bold">=</span>timeout
-<span class="ansi-green-fg">    450</span>                 )
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\urllib3\connectionpool.py</span> in <span class="ansi-cyan-fg">urlopen</span><span class="ansi-blue-intense-fg ansi-bold">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, **response_kw)</span>
-<span class="ansi-green-fg">    637</span>             retries = retries.increment(method, url, error=e, _pool=self,
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 638</span><span class="ansi-yellow-intense-fg ansi-bold">                                         _stacktrace=sys.exc_info()[2])
-</span><span class="ansi-green-fg">    639</span>             retries<span class="ansi-yellow-intense-fg ansi-bold">.</span>sleep<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\urllib3\util\retry.py</span> in <span class="ansi-cyan-fg">increment</span><span class="ansi-blue-intense-fg ansi-bold">(self, method, url, response, error, _pool, _stacktrace)</span>
-<span class="ansi-green-fg">    397</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> new_retry<span class="ansi-yellow-intense-fg ansi-bold">.</span>is_exhausted<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 398</span><span class="ansi-yellow-intense-fg ansi-bold">             </span><span class="ansi-green-intense-fg ansi-bold">raise</span> MaxRetryError<span class="ansi-yellow-intense-fg ansi-bold">(</span>_pool<span class="ansi-yellow-intense-fg ansi-bold">,</span> url<span class="ansi-yellow-intense-fg ansi-bold">,</span> error <span class="ansi-green-intense-fg ansi-bold">or</span> ResponseError<span class="ansi-yellow-intense-fg ansi-bold">(</span>cause<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    399</span> 
-
-<span class="ansi-red-intense-fg ansi-bold">MaxRetryError</span>: HTTPSConnectionPool(host=&#39;d17h27t6h515a5.cloudfront.net&#39;, port=443): Max retries exceeded with url: /topher/2017/August/599fd2ad_image-predictions/image-predictions.tsv (Caused by NewConnectionError(&#39;&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x000002A854EDB080&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&#39;,))
-
-During handling of the above exception, another exception occurred:
-
-<span class="ansi-red-intense-fg ansi-bold">ConnectionError</span>                           Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-85-3cddcfa3dd68&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      3</span> 
-<span class="ansi-green-fg">      4</span> url <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-blue-intense-fg ansi-bold">&#34;https://d17h27t6h515a5.cloudfront.net/topher/2017/August/599fd2ad_image-predictions/image-predictions.tsv&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 5</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>s <span class="ansi-yellow-intense-fg ansi-bold">=</span> requests<span class="ansi-yellow-intense-fg ansi-bold">.</span>get<span class="ansi-yellow-intense-fg ansi-bold">(</span>url<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>content
-<span class="ansi-green-fg">      6</span> df_image1 <span class="ansi-yellow-intense-fg ansi-bold">=</span> pd<span class="ansi-yellow-intense-fg ansi-bold">.</span>read_csv<span class="ansi-yellow-intense-fg ansi-bold">(</span>io<span class="ansi-yellow-intense-fg ansi-bold">.</span>StringIO<span class="ansi-yellow-intense-fg ansi-bold">(</span>s<span class="ansi-yellow-intense-fg ansi-bold">.</span>decode<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;utf-8&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> sep<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-blue-intense-fg ansi-bold">&#39;\t&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      7</span> df_image1<span class="ansi-yellow-intense-fg ansi-bold">.</span>head<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\requests\api.py</span> in <span class="ansi-cyan-fg">get</span><span class="ansi-blue-intense-fg ansi-bold">(url, params, **kwargs)</span>
-<span class="ansi-green-fg">     73</span> 
-<span class="ansi-green-fg">     74</span>     kwargs<span class="ansi-yellow-intense-fg ansi-bold">.</span>setdefault<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;allow_redirects&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-green-intense-fg ansi-bold">True</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 75</span><span class="ansi-yellow-intense-fg ansi-bold">     </span><span class="ansi-green-intense-fg ansi-bold">return</span> request<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;get&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> url<span class="ansi-yellow-intense-fg ansi-bold">,</span> params<span class="ansi-yellow-intense-fg ansi-bold">=</span>params<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">**</span>kwargs<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">     76</span> 
-<span class="ansi-green-fg">     77</span> 
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\requests\api.py</span> in <span class="ansi-cyan-fg">request</span><span class="ansi-blue-intense-fg ansi-bold">(method, url, **kwargs)</span>
-<span class="ansi-green-fg">     58</span>     <span class="ansi-red-intense-fg ansi-bold"># cases, and look like a memory leak in others.</span>
-<span class="ansi-green-fg">     59</span>     <span class="ansi-green-intense-fg ansi-bold">with</span> sessions<span class="ansi-yellow-intense-fg ansi-bold">.</span>Session<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-green-intense-fg ansi-bold">as</span> session<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 60</span><span class="ansi-yellow-intense-fg ansi-bold">         </span><span class="ansi-green-intense-fg ansi-bold">return</span> session<span class="ansi-yellow-intense-fg ansi-bold">.</span>request<span class="ansi-yellow-intense-fg ansi-bold">(</span>method<span class="ansi-yellow-intense-fg ansi-bold">=</span>method<span class="ansi-yellow-intense-fg ansi-bold">,</span> url<span class="ansi-yellow-intense-fg ansi-bold">=</span>url<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">**</span>kwargs<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">     61</span> 
-<span class="ansi-green-fg">     62</span> 
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\requests\sessions.py</span> in <span class="ansi-cyan-fg">request</span><span class="ansi-blue-intense-fg ansi-bold">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
-<span class="ansi-green-fg">    531</span>         }
-<span class="ansi-green-fg">    532</span>         send_kwargs<span class="ansi-yellow-intense-fg ansi-bold">.</span>update<span class="ansi-yellow-intense-fg ansi-bold">(</span>settings<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 533</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>resp <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>send<span class="ansi-yellow-intense-fg ansi-bold">(</span>prep<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">**</span>send_kwargs<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    534</span> 
-<span class="ansi-green-fg">    535</span>         <span class="ansi-green-intense-fg ansi-bold">return</span> resp
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\requests\sessions.py</span> in <span class="ansi-cyan-fg">send</span><span class="ansi-blue-intense-fg ansi-bold">(self, request, **kwargs)</span>
-<span class="ansi-green-fg">    644</span> 
-<span class="ansi-green-fg">    645</span>         <span class="ansi-red-intense-fg ansi-bold"># Send the request</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 646</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>r <span class="ansi-yellow-intense-fg ansi-bold">=</span> adapter<span class="ansi-yellow-intense-fg ansi-bold">.</span>send<span class="ansi-yellow-intense-fg ansi-bold">(</span>request<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">**</span>kwargs<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    647</span> 
-<span class="ansi-green-fg">    648</span>         <span class="ansi-red-intense-fg ansi-bold"># Total elapsed time of the request (approximately)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\requests\adapters.py</span> in <span class="ansi-cyan-fg">send</span><span class="ansi-blue-intense-fg ansi-bold">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="ansi-green-fg">    514</span>                 <span class="ansi-green-intense-fg ansi-bold">raise</span> SSLError<span class="ansi-yellow-intense-fg ansi-bold">(</span>e<span class="ansi-yellow-intense-fg ansi-bold">,</span> request<span class="ansi-yellow-intense-fg ansi-bold">=</span>request<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    515</span> 
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 516</span><span class="ansi-yellow-intense-fg ansi-bold">             </span><span class="ansi-green-intense-fg ansi-bold">raise</span> ConnectionError<span class="ansi-yellow-intense-fg ansi-bold">(</span>e<span class="ansi-yellow-intense-fg ansi-bold">,</span> request<span class="ansi-yellow-intense-fg ansi-bold">=</span>request<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    517</span> 
-<span class="ansi-green-fg">    518</span>         <span class="ansi-green-intense-fg ansi-bold">except</span> ClosedPoolError <span class="ansi-green-intense-fg ansi-bold">as</span> e<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-
-<span class="ansi-red-intense-fg ansi-bold">ConnectionError</span>: HTTPSConnectionPool(host=&#39;d17h27t6h515a5.cloudfront.net&#39;, port=443): Max retries exceeded with url: /topher/2017/August/599fd2ad_image-predictions/image-predictions.tsv (Caused by NewConnectionError(&#39;&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x000002A854EDB080&gt;: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。&#39;,))</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[433]:</div>
+<div class="prompt input_prompt">In&nbsp;[399]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># read in json file</span>
@@ -12006,7 +11874,7 @@ During handling of the above exception, another exception occurred:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[434]:</div>
+<div class="prompt input_prompt">In&nbsp;[400]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -12022,7 +11890,7 @@ During handling of the above exception, another exception occurred:
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[434]:</div>
+<div class="prompt output_prompt">Out[400]:</div>
 
 
 
@@ -12178,7 +12046,7 @@ During handling of the above exception, another exception occurred:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[435]:</div>
+<div class="prompt input_prompt">In&nbsp;[401]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_image</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -12194,7 +12062,7 @@ During handling of the above exception, another exception occurred:
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[435]:</div>
+<div class="prompt output_prompt">Out[401]:</div>
 
 
 
@@ -12320,7 +12188,7 @@ During handling of the above exception, another exception occurred:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[436]:</div>
+<div class="prompt input_prompt">In&nbsp;[402]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_retweet</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -12336,7 +12204,7 @@ During handling of the above exception, another exception occurred:
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[436]:</div>
+<div class="prompt output_prompt">Out[402]:</div>
 
 
 
@@ -12525,7 +12393,7 @@ During handling of the above exception, another exception occurred:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[437]:</div>
+<div class="prompt input_prompt">In&nbsp;[403]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -12577,7 +12445,7 @@ memory usage: 313.0+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[438]:</div>
+<div class="prompt input_prompt">In&nbsp;[404]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_image</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -12624,7 +12492,7 @@ memory usage: 152.1+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[439]:</div>
+<div class="prompt input_prompt">In&nbsp;[405]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_retweet</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -12750,7 +12618,7 @@ memory usage: 505.8+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[440]:</div>
+<div class="prompt input_prompt">In&nbsp;[406]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_clean</span> <span class="o">=</span> <span class="n">df_archive</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -12763,7 +12631,7 @@ memory usage: 505.8+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[441]:</div>
+<div class="prompt input_prompt">In&nbsp;[407]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_image_clean</span> <span class="o">=</span> <span class="n">df_image</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -12776,7 +12644,7 @@ memory usage: 505.8+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[442]:</div>
+<div class="prompt input_prompt">In&nbsp;[408]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_retweet_clean</span> <span class="o">=</span> <span class="n">df_retweet</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -12814,7 +12682,7 @@ memory usage: 505.8+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[443]:</div>
+<div class="prompt input_prompt">In&nbsp;[409]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_clean1</span> <span class="o">=</span> <span class="n">df_archive_clean</span><span class="p">[</span><span class="n">df_archive_clean</span><span class="p">[</span><span class="s1">&#39;retweeted_status_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
@@ -12835,7 +12703,7 @@ memory usage: 505.8+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[444]:</div>
+<div class="prompt input_prompt">In&nbsp;[410]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#how many retweets are included in df_archive_clean?</span>
@@ -12853,7 +12721,7 @@ memory usage: 505.8+ KB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[444]:</div>
+<div class="prompt output_prompt">Out[410]:</div>
 
 
 
@@ -12870,7 +12738,7 @@ memory usage: 505.8+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[445]:</div>
+<div class="prompt input_prompt">In&nbsp;[411]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#The sum of retweets_len and df_archive_clean1 should equal the number of </span>
@@ -12889,7 +12757,7 @@ memory usage: 505.8+ KB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[445]:</div>
+<div class="prompt output_prompt">Out[411]:</div>
 
 
 
@@ -12906,7 +12774,7 @@ memory usage: 505.8+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[446]:</div>
+<div class="prompt input_prompt">In&nbsp;[412]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">df_archive_clean</span><span class="p">)</span>
@@ -12922,7 +12790,7 @@ memory usage: 505.8+ KB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[446]:</div>
+<div class="prompt output_prompt">Out[412]:</div>
 
 
 
@@ -12964,7 +12832,7 @@ memory usage: 505.8+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[447]:</div>
+<div class="prompt input_prompt">In&nbsp;[413]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Merge both df&#39;s with &#39;inner&#39;, that means only those tweet_id&#39;s and their rows will be kept</span>
@@ -12989,7 +12857,7 @@ memory usage: 505.8+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[448]:</div>
+<div class="prompt input_prompt">In&nbsp;[414]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_merge_archive_image</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -13005,7 +12873,7 @@ memory usage: 505.8+ KB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[448]:</div>
+<div class="prompt output_prompt">Out[414]:</div>
 
 
 
@@ -13090,7 +12958,7 @@ memory usage: 505.8+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[449]:</div>
+<div class="prompt input_prompt">In&nbsp;[415]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#the number of rows of df_merge_archive_image should be smaller or equal to</span>
@@ -13109,7 +12977,7 @@ memory usage: 505.8+ KB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[449]:</div>
+<div class="prompt output_prompt">Out[415]:</div>
 
 
 
@@ -13126,7 +12994,7 @@ memory usage: 505.8+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[450]:</div>
+<div class="prompt input_prompt">In&nbsp;[416]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#the number of columns of df_merge_archive_image should be the sum of</span>
@@ -13189,7 +13057,7 @@ memory usage: 505.8+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[451]:</div>
+<div class="prompt input_prompt">In&nbsp;[417]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_merge_archive_image</span><span class="o">.</span><span class="n">timestamp</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
@@ -13205,7 +13073,7 @@ memory usage: 505.8+ KB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[451]:</div>
+<div class="prompt output_prompt">Out[417]:</div>
 
 
 
@@ -13261,7 +13129,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[452]:</div>
+<div class="prompt input_prompt">In&nbsp;[418]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># from df_retweet_clean, choose columns &#39;id&#39;, &#39;id_str&#39; and &#39;favorite count&#39;</span>
@@ -13283,7 +13151,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[453]:</div>
+<div class="prompt input_prompt">In&nbsp;[419]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#see if required columns are kept, using head(1)</span>
@@ -13300,7 +13168,7 @@ Name: timestamp, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[453]:</div>
+<div class="prompt output_prompt">Out[419]:</div>
 
 
 
@@ -13403,7 +13271,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[454]:</div>
+<div class="prompt input_prompt">In&nbsp;[420]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_retweet_counts1</span> <span class="o">=</span> <span class="n">df_retweet_counts</span><span class="p">[</span><span class="n">df_retweet_counts</span><span class="o">.</span><span class="n">retweet_count</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
@@ -13424,7 +13292,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[455]:</div>
+<div class="prompt input_prompt">In&nbsp;[421]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Output should be zero.</span>
@@ -13441,7 +13309,7 @@ Name: timestamp, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[455]:</div>
+<div class="prompt output_prompt">Out[421]:</div>
 
 
 
@@ -13491,7 +13359,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[456]:</div>
+<div class="prompt input_prompt">In&nbsp;[422]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#rename columns</span>
@@ -13505,7 +13373,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[457]:</div>
+<div class="prompt input_prompt">In&nbsp;[423]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#test if renaming was successful</span>
@@ -13522,7 +13390,7 @@ Name: timestamp, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[457]:</div>
+<div class="prompt output_prompt">Out[423]:</div>
 
 
 
@@ -13572,7 +13440,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[458]:</div>
+<div class="prompt input_prompt">In&nbsp;[424]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#merge df&#39;s df_merge_archive_image and df_retweet_counts1  </span>
@@ -13587,7 +13455,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[459]:</div>
+<div class="prompt input_prompt">In&nbsp;[425]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Get number of rows from df_test1</span>
@@ -13604,7 +13472,7 @@ Name: timestamp, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[459]:</div>
+<div class="prompt output_prompt">Out[425]:</div>
 
 
 
@@ -13621,7 +13489,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[460]:</div>
+<div class="prompt input_prompt">In&nbsp;[426]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Rename &#39;tweet_id&#39; back to &#39;id&#39; and rename &#39;id_str&#39; to &#39;tweet_id&#39; </span>
@@ -13636,7 +13504,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[461]:</div>
+<div class="prompt input_prompt">In&nbsp;[427]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#test if renaming was successful</span>
@@ -13653,7 +13521,7 @@ Name: timestamp, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[461]:</div>
+<div class="prompt output_prompt">Out[427]:</div>
 
 
 
@@ -13703,7 +13571,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[462]:</div>
+<div class="prompt input_prompt">In&nbsp;[428]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Rename &#39;id_str&#39; to &#39;tweet_id&#39; </span>
@@ -13717,7 +13585,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[463]:</div>
+<div class="prompt input_prompt">In&nbsp;[429]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#test if renaming was successful</span>
@@ -13734,7 +13602,7 @@ Name: timestamp, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[463]:</div>
+<div class="prompt output_prompt">Out[429]:</div>
 
 
 
@@ -13784,7 +13652,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[464]:</div>
+<div class="prompt input_prompt">In&nbsp;[430]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#merge df&#39;s df_merge_archive_image and df_retweet_counts1  </span>
@@ -13799,7 +13667,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[465]:</div>
+<div class="prompt input_prompt">In&nbsp;[431]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Get number of rows from df_test1</span>
@@ -13816,7 +13684,7 @@ Name: timestamp, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[465]:</div>
+<div class="prompt output_prompt">Out[431]:</div>
 
 
 
@@ -13833,7 +13701,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[466]:</div>
+<div class="prompt input_prompt">In&nbsp;[432]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df_test1 has more rows, so I delete &#39;tweet_id&#39; from df_retweet_counts1</span>
@@ -13851,7 +13719,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[467]:</div>
+<div class="prompt input_prompt">In&nbsp;[433]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Test:</span>
@@ -13890,7 +13758,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[468]:</div>
+<div class="prompt input_prompt">In&nbsp;[434]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Test: Check if the column &#39;tweet_id&#39; still exists</span>
@@ -13907,7 +13775,7 @@ Name: timestamp, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[468]:</div>
+<div class="prompt output_prompt">Out[434]:</div>
 
 
 
@@ -13992,7 +13860,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[469]:</div>
+<div class="prompt input_prompt">In&nbsp;[435]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Test: Get number of rows from df_archive_image_retweet, it should </span>
@@ -14010,7 +13878,7 @@ Name: timestamp, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[469]:</div>
+<div class="prompt output_prompt">Out[435]:</div>
 
 
 
@@ -14052,7 +13920,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[470]:</div>
+<div class="prompt input_prompt">In&nbsp;[436]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get number of rows, where rating_denominator is != 10</span>
@@ -14069,7 +13937,7 @@ Name: timestamp, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[470]:</div>
+<div class="prompt output_prompt">Out[436]:</div>
 
 
 
@@ -14086,7 +13954,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[471]:</div>
+<div class="prompt input_prompt">In&nbsp;[437]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#if values rating_denominator !=10, change them to 10 </span>
@@ -14110,7 +13978,7 @@ Name: timestamp, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[472]:</div>
+<div class="prompt input_prompt">In&nbsp;[438]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#check if any values !=10 are left in rating_denominator</span>
@@ -14127,7 +13995,7 @@ Name: timestamp, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[472]:</div>
+<div class="prompt output_prompt">Out[438]:</div>
 
 
 
@@ -14180,7 +14048,7 @@ Delete the columns 'rating_numerator' and 'rating_denominator</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[473]:</div>
+<div class="prompt input_prompt">In&nbsp;[439]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#create new column and divide value x by value y</span>
@@ -14196,7 +14064,7 @@ Delete the columns 'rating_numerator' and 'rating_denominator</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[474]:</div>
+<div class="prompt input_prompt">In&nbsp;[440]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#test if new column was created and if it contains the values of x / y</span>
@@ -14213,7 +14081,7 @@ Delete the columns 'rating_numerator' and 'rating_denominator</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[474]:</div>
+<div class="prompt output_prompt">Out[440]:</div>
 
 
 
@@ -14285,7 +14153,7 @@ Delete the columns 'rating_numerator' and 'rating_denominator</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[475]:</div>
+<div class="prompt input_prompt">In&nbsp;[441]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -14301,7 +14169,7 @@ Delete the columns 'rating_numerator' and 'rating_denominator</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[475]:</div>
+<div class="prompt output_prompt">Out[441]:</div>
 
 
 
@@ -14386,7 +14254,7 @@ Delete the columns 'rating_numerator' and 'rating_denominator</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[476]:</div>
+<div class="prompt input_prompt">In&nbsp;[442]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#drop columns &#39;rating_numerator&#39; and &#39;rating_denominator&#39;</span>
@@ -14400,7 +14268,7 @@ Delete the columns 'rating_numerator' and 'rating_denominator</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[477]:</div>
+<div class="prompt input_prompt">In&nbsp;[443]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#check if columns &#39;rating_numerator&#39; and &#39;rating_denominator&#39; are dropped</span>
@@ -14417,7 +14285,7 @@ Delete the columns 'rating_numerator' and 'rating_denominator</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[477]:</div>
+<div class="prompt output_prompt">Out[443]:</div>
 
 
 
@@ -14487,7 +14355,7 @@ Delete the columns 'rating_numerator' and 'rating_denominator</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[478]:</div>
+<div class="prompt input_prompt">In&nbsp;[444]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">p1</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">p1</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
@@ -14510,7 +14378,7 @@ Delete the columns 'rating_numerator' and 'rating_denominator</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[479]:</div>
+<div class="prompt input_prompt">In&nbsp;[445]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#check if datatype of columns p1, p2, p3 changed to category</span>
@@ -14600,7 +14468,7 @@ memory usage: 450.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[480]:</div>
+<div class="prompt input_prompt">In&nbsp;[446]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">timestamp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">timestamp</span><span class="p">)</span>
@@ -14621,7 +14489,7 @@ memory usage: 450.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[481]:</div>
+<div class="prompt input_prompt">In&nbsp;[447]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#check if datatype of column timestamp changed to datetime</span>
@@ -14708,7 +14576,7 @@ memory usage: 450.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[482]:</div>
+<div class="prompt input_prompt">In&nbsp;[448]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_image_retweet</span><span class="p">[[</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;floofer&#39;</span><span class="p">,</span> <span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="s1">&#39;puppo&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -14724,7 +14592,7 @@ memory usage: 450.6+ KB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[482]:</div>
+<div class="prompt output_prompt">Out[448]:</div>
 
 
 
@@ -14810,7 +14678,7 @@ memory usage: 450.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[483]:</div>
+<div class="prompt input_prompt">In&nbsp;[449]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#create new column: &#39;number_none&#39; and</span>
@@ -14829,7 +14697,7 @@ memory usage: 450.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[484]:</div>
+<div class="prompt input_prompt">In&nbsp;[450]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_image_retweet</span><span class="p">[</span><span class="s1">&#39;number_none&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -14845,7 +14713,7 @@ memory usage: 450.6+ KB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[484]:</div>
+<div class="prompt output_prompt">Out[450]:</div>
 
 
 
@@ -14867,7 +14735,204 @@ Name: number_none, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[485]:</div>
+<div class="prompt input_prompt">In&nbsp;[451]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[451]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tweet_id</th>
+      <th>in_reply_to_status_id</th>
+      <th>in_reply_to_user_id</th>
+      <th>timestamp</th>
+      <th>source</th>
+      <th>text</th>
+      <th>retweeted_status_id</th>
+      <th>retweeted_status_user_id</th>
+      <th>retweeted_status_timestamp</th>
+      <th>expanded_urls</th>
+      <th>...</th>
+      <th>p2</th>
+      <th>p2_conf</th>
+      <th>p2_dog</th>
+      <th>p3</th>
+      <th>p3_conf</th>
+      <th>p3_dog</th>
+      <th>retweet_count</th>
+      <th>favorite_count</th>
+      <th>rating</th>
+      <th>number_none</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>892420643555336193</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2017-08-01 16:23:56</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>This is Phineas. He's a mystical boy. Only eve...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://twitter.com/dog_rates/status/892420643...</td>
+      <td>...</td>
+      <td>bagel</td>
+      <td>0.085851</td>
+      <td>False</td>
+      <td>banana</td>
+      <td>0.076110</td>
+      <td>False</td>
+      <td>8853</td>
+      <td>39467</td>
+      <td>1.3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>892177421306343426</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2017-08-01 00:17:27</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>This is Tilly. She's just checking pup on you....</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://twitter.com/dog_rates/status/892177421...</td>
+      <td>...</td>
+      <td>Pekinese</td>
+      <td>0.090647</td>
+      <td>True</td>
+      <td>papillon</td>
+      <td>0.068957</td>
+      <td>True</td>
+      <td>6514</td>
+      <td>33819</td>
+      <td>1.3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>891815181378084864</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2017-07-31 00:18:03</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>This is Archie. He is a rare Norwegian Pouncin...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://twitter.com/dog_rates/status/891815181...</td>
+      <td>...</td>
+      <td>malamute</td>
+      <td>0.078253</td>
+      <td>True</td>
+      <td>kelpie</td>
+      <td>0.031379</td>
+      <td>True</td>
+      <td>4328</td>
+      <td>25461</td>
+      <td>1.2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>891689557279858688</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2017-07-30 15:58:51</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>This is Darla. She commenced a snooze mid meal...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://twitter.com/dog_rates/status/891689557...</td>
+      <td>...</td>
+      <td>Labrador_retriever</td>
+      <td>0.168086</td>
+      <td>True</td>
+      <td>spatula</td>
+      <td>0.040836</td>
+      <td>False</td>
+      <td>8964</td>
+      <td>42908</td>
+      <td>1.3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>891327558926688256</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2017-07-29 16:00:24</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>This is Franklin. He would like you to stop ca...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://twitter.com/dog_rates/status/891327558...</td>
+      <td>...</td>
+      <td>English_springer</td>
+      <td>0.225770</td>
+      <td>True</td>
+      <td>German_short-haired_pointer</td>
+      <td>0.175219</td>
+      <td>True</td>
+      <td>9774</td>
+      <td>41048</td>
+      <td>1.2</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 30 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[452]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#get those rows where sum is less than 3</span>
@@ -14884,7 +14949,7 @@ Name: number_none, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[485]:</div>
+<div class="prompt output_prompt">Out[452]:</div>
 
 
 
@@ -15028,11 +15093,53 @@ Name: number_none, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[486]:</div>
+<div class="prompt input_prompt">In&nbsp;[453]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#export current df to dataframe</span>
-<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;df_archive_image_retweet.csv&#39;</span><span class="p">)</span>
+<span class="c1">#df_archive_image_retweet.to_csv(&#39;df_archive_image_retweet.csv&#39;)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[454]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># look at content of &#39;text&#39; column in the lines with the above indices and change values </span>
+<span class="c1">#in the columns &#39;doggo&#39;, &#39;floofer&#39;, &#39;pupper&#39; and &#39;puppo&#39; accordingly</span>
+<span class="c1">#the code in line 4 switches of a warning</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">chained_assignment</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">148</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">148</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">154</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">154</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">340</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">340</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">397</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">397</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">pupper</span><span class="p">[</span><span class="mi">419</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">pupper</span><span class="p">[</span><span class="mi">419</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">425</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">425</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">pupper</span><span class="p">[</span><span class="mi">510</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">pupper</span><span class="p">[</span><span class="mi">510</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">pupper</span><span class="p">[</span><span class="mi">652</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">pupper</span><span class="p">[</span><span class="mi">652</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">pupper</span><span class="p">[</span><span class="mi">704</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">pupper</span><span class="p">[</span><span class="mi">704</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">704</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">704</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">795</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">795</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">841</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">841</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[455]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#for final version, this cell can be removed</span>
+<span class="n">df_archive_image_retweet</span><span class="p">[</span><span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">number_none</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">][[</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;floofer&#39;</span><span class="p">,</span> <span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="s1">&#39;puppo&#39;</span><span class="p">,</span> <span class="s1">&#39;number_none&#39;</span><span class="p">]]</span>
 </pre></div>
 
 </div>
@@ -15045,58 +15152,219 @@ Name: number_none, dtype: int64</pre>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+<div class="prompt output_prompt">Out[455]:</div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">PermissionError</span>                           Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-486-5495546014c1&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      1</span> <span class="ansi-red-intense-fg ansi-bold">#export current df to dataframe</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>df_archive_image_retweet<span class="ansi-yellow-intense-fg ansi-bold">.</span>to_csv<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;df_archive_image_retweet.csv&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
 
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\pandas\core\frame.py</span> in <span class="ansi-cyan-fg">to_csv</span><span class="ansi-blue-intense-fg ansi-bold">(self, path_or_buf, sep, na_rep, float_format, columns, header, index, index_label, mode, encoding, compression, quoting, quotechar, line_terminator, chunksize, tupleize_cols, date_format, doublequote, escapechar, decimal)</span>
-<span class="ansi-green-fg">   1743</span>                                  doublequote<span class="ansi-yellow-intense-fg ansi-bold">=</span>doublequote<span class="ansi-yellow-intense-fg ansi-bold">,</span>
-<span class="ansi-green-fg">   1744</span>                                  escapechar=escapechar, decimal=decimal)
-<span class="ansi-green-intense-fg ansi-bold">-&gt; 1745</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>formatter<span class="ansi-yellow-intense-fg ansi-bold">.</span>save<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">   1746</span> 
-<span class="ansi-green-fg">   1747</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> path_or_buf <span class="ansi-green-intense-fg ansi-bold">is</span> <span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\pandas\io\formats\csvs.py</span> in <span class="ansi-cyan-fg">save</span><span class="ansi-blue-intense-fg ansi-bold">(self)</span>
-<span class="ansi-green-fg">    154</span>             f, handles = _get_handle(self.path_or_buf, self.mode,
-<span class="ansi-green-fg">    155</span>                                      encoding<span class="ansi-yellow-intense-fg ansi-bold">=</span>encoding<span class="ansi-yellow-intense-fg ansi-bold">,</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 156</span><span class="ansi-yellow-intense-fg ansi-bold">                                      compression=self.compression)
-</span><span class="ansi-green-fg">    157</span>             close <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-green-intense-fg ansi-bold">True</span>
-<span class="ansi-green-fg">    158</span> 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda2\envs\data-3\lib\site-packages\pandas\io\common.py</span> in <span class="ansi-cyan-fg">_get_handle</span><span class="ansi-blue-intense-fg ansi-bold">(path_or_buf, mode, encoding, compression, memory_map, is_text)</span>
-<span class="ansi-green-fg">    398</span>         <span class="ansi-green-intense-fg ansi-bold">elif</span> encoding<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">    399</span>             <span class="ansi-red-intense-fg ansi-bold"># Python 3 and encoding</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 400</span><span class="ansi-yellow-intense-fg ansi-bold">             </span>f <span class="ansi-yellow-intense-fg ansi-bold">=</span> open<span class="ansi-yellow-intense-fg ansi-bold">(</span>path_or_buf<span class="ansi-yellow-intense-fg ansi-bold">,</span> mode<span class="ansi-yellow-intense-fg ansi-bold">,</span> encoding<span class="ansi-yellow-intense-fg ansi-bold">=</span>encoding<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    401</span>         <span class="ansi-green-intense-fg ansi-bold">elif</span> is_text<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">    402</span>             <span class="ansi-red-intense-fg ansi-bold"># Python 3 and no explicit encoding</span>
-
-<span class="ansi-red-intense-fg ansi-bold">PermissionError</span>: [Errno 13] Permission denied: &#39;df_archive_image_retweet.csv&#39;</pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>text</th>
+      <th>doggo</th>
+      <th>floofer</th>
+      <th>pupper</th>
+      <th>puppo</th>
+      <th>number_none</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>148</th>
+      <td>Here's a puppo participating in the #ScienceMa...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>puppo</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>154</th>
+      <td>At first I thought this was a shy doggo, but i...</td>
+      <td>None</td>
+      <td>floofer</td>
+      <td>None</td>
+      <td>None</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>340</th>
+      <td>This is Dido. She's playing the lead role in "...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>pupper</td>
+      <td>None</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>397</th>
+      <td>Here we have Burke (pupper) and Dexter (doggo)...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>pupper</td>
+      <td>None</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>419</th>
+      <td>Like doggo, like pupper version 2. Both 11/10 ...</td>
+      <td>doggo</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>425</th>
+      <td>This is Bones. He's being haunted by another d...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>pupper</td>
+      <td>None</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>510</th>
+      <td>This is Pinot. He's a sophisticated doggo. You...</td>
+      <td>doggo</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>652</th>
+      <td>Meet Maggie &amp;amp; Lila. Maggie is the doggo, L...</td>
+      <td>doggo</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>704</th>
+      <td>Please stop sending it pictures that don't eve...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>795</th>
+      <td>This is just downright precious af. 12/10 for ...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>pupper</td>
+      <td>None</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>841</th>
+      <td>Like father (doggo), like son (pupper). Both 1...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>pupper</td>
+      <td>None</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
 </div>
 </div>
 
 </div>
+
+</div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Test">Test<a class="anchor-link" href="#Test">&#182;</a></h4>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[487]:</div>
+<div class="prompt input_prompt">In&nbsp;[456]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># look at content of &#39;text&#39; column in the lines with the above indices and change values </span>
-<span class="c1">#in the columns &#39;doggo&#39;, &#39;floofer&#39;, &#39;pupper&#39; and &#39;puppo&#39; accordingly</span>
-<span class="n">df_archive_image_retweet</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">148</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
-<span class="n">df_archive_image_retweet</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="p">[</span><span class="mi">154</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#check if there are still rows where sum is less than 3 (no row except column names should occur)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;None&#39;</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">floofer</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;None&#39;</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">pupper</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;None&#39;</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">puppo</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;None&#39;</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="p">[</span><span class="s1">&#39;number_none&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="n">d</span> 
+<span class="n">df_archive_image_retweet</span><span class="p">[</span><span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">number_none</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">][[</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;floofer&#39;</span><span class="p">,</span> <span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="s1">&#39;puppo&#39;</span><span class="p">,</span> <span class="s1">&#39;number_none&#39;</span><span class="p">]]</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[456]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>text</th>
+      <th>doggo</th>
+      <th>floofer</th>
+      <th>pupper</th>
+      <th>puppo</th>
+      <th>number_none</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -15116,7 +15384,7 @@ Name: number_none, dtype: int64</pre>
 <h4 id="Define">Define<a class="anchor-link" href="#Define">&#182;</a></h4><ul>
 <li>Create new column called 'dog_stage'</li>
 <li>fill 'dog_stage' column with respective values None, doggo, floofer, pupper, puppo</li>
-<li>delete columns doggo, floofer, pupper, puppo</li>
+<li>drop columns doggo, floofer, pupper, puppo</li>
 </ul>
 
 </div>
@@ -15132,80 +15400,249 @@ Name: number_none, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[457]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#test preparation: number of values for &#39;doggo&#39;, &#39;floofer&#39;, &#39;pupper&#39; and &#39;puppo&#39; in respective columns</span>
-<span class="c1">#df_archive_image_retweet[&#39;doggo&#39;].value_counts()</span>
+<span class="n">df_archive_image_retweet</span><span class="p">[</span><span class="s1">&#39;doggo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[457]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>None     1928
+doggo      66
+Name: doggo, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[458]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df_archive_image_retweet[&#39;floofer&#39;].value_counts()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_image_retweet</span><span class="p">[</span><span class="s1">&#39;floofer&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[458]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>None       1986
+floofer       8
+Name: floofer, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[459]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df_archive_image_retweet[&#39;pupper&#39;].value_counts()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_image_retweet</span><span class="p">[</span><span class="s1">&#39;pupper&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[459]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>None      1786
+pupper     208
+Name: pupper, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[460]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df_archive_image_retweet[&#39;puppo&#39;].value_counts()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_image_retweet</span><span class="p">[</span><span class="s1">&#39;puppo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[460]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>None     1971
+puppo      23
+Name: puppo, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[461]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df_archive_image_retweet[[&#39;doggo&#39;, &#39;floofer&#39;, &#39;pupper&#39;, &#39;puppo&#39;]].head(5)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_image_retweet</span><span class="p">[[</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;floofer&#39;</span><span class="p">,</span> <span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="s1">&#39;puppo&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[461]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>doggo</th>
+      <th>floofer</th>
+      <th>pupper</th>
+      <th>puppo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[462]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#replace None with 0 in columns &#39;doggo&#39;, &#39;floofer&#39;, &#39;pupper&#39;, &#39;puppo&#39;</span>
-<span class="c1">#df_archive_image_retweet.doggo.replace(&#39;None&#39;, 0, inplace=True)</span>
-<span class="c1">#df_archive_image_retweet.floofer.replace(&#39;None&#39;, 0, inplace=True)</span>
-<span class="c1">#df_archive_image_retweet.pupper.replace(&#39;None&#39;, 0, inplace=True)</span>
-<span class="c1">#df_archive_image_retweet.puppo.replace(&#39;None&#39;, 0, inplace=True)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">floofer</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">pupper</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">puppo</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -15215,27 +15652,283 @@ Name: number_none, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[463]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df_archive_image_retweet[[&#39;doggo&#39;, &#39;floofer&#39;, &#39;pupper&#39;, &#39;puppo&#39;]].head(30)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_image_retweet</span><span class="p">[[</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;floofer&#39;</span><span class="p">,</span> <span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="s1">&#39;puppo&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[463]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>doggo</th>
+      <th>floofer</th>
+      <th>pupper</th>
+      <th>puppo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>doggo</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>puppo</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>puppo</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>0</td>
+      <td>0</td>
+      <td>pupper</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[464]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#replace dog stages in columns &#39;doggo&#39;, &#39;floofer&#39;, &#39;pupper&#39;, &#39;puppo&#39; with numbers 1, 2, 3, 4</span>
-<span class="c1">#df_archive_image_retweet.doggo.replace(&#39;doggo&#39;, 1, inplace=True)</span>
-<span class="c1">#df_archive_image_retweet.floofer.replace(&#39;floofer&#39;, 2, inplace=True)</span>
-<span class="c1">#df_archive_image_retweet.pupper.replace(&#39;pupper&#39;, 3, inplace=True)</span>
-<span class="c1">#df_archive_image_retweet.puppo.replace(&#39;puppo&#39;, 4, inplace=True)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">floofer</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;floofer&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">pupper</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">puppo</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;puppo&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -15245,28 +15938,284 @@ Name: number_none, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[465]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df_archive_image_retweet[[&#39;doggo&#39;, &#39;floofer&#39;, &#39;pupper&#39;, &#39;puppo&#39;]].head(30)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_image_retweet</span><span class="p">[[</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;floofer&#39;</span><span class="p">,</span> <span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="s1">&#39;puppo&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[465]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>doggo</th>
+      <th>floofer</th>
+      <th>pupper</th>
+      <th>puppo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[466]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#create new column &#39;dog_stage&#39; and move numbers (variables) 1, 2，3 and 4 to this column</span>
-<span class="c1">#a = df_archive_image_retweet.doggo</span>
-<span class="c1">#b = df_archive_image_retweet.floofer</span>
-<span class="c1">#c = df_archive_image_retweet.pupper</span>
-<span class="c1">#d = df_archive_image_retweet.puppo</span>
-<span class="c1">#df_archive_image_retweet[&#39;dog_stage&#39;] = (a + b + c + d)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">doggo</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">floofer</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">pupper</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">puppo</span>
+<span class="n">df_archive_image_retweet</span><span class="p">[</span><span class="s1">&#39;dog_stage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -15276,27 +16225,314 @@ Name: number_none, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[467]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df_archive_image_retweet[[&#39;doggo&#39;, &#39;floofer&#39;, &#39;pupper&#39;, &#39;puppo&#39;, &#39;dog_stage&#39;]].head(30)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_archive_image_retweet</span><span class="p">[[</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;floofer&#39;</span><span class="p">,</span> <span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="s1">&#39;puppo&#39;</span><span class="p">,</span> <span class="s1">&#39;dog_stage&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[467]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>doggo</th>
+      <th>floofer</th>
+      <th>pupper</th>
+      <th>puppo</th>
+      <th>dog_stage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[468]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#column &#39;dog_stage&#39;: replace numbers (variables) 1, 2，3 and 4 with dog stages</span>
-<span class="c1">#df_archive_image_retweet.dog_stage.replace(1, &#39;doggo&#39;, inplace=True)</span>
-<span class="c1">#df_archive_image_retweet.dog_stage.replace(2, &#39;floofer&#39;, inplace=True)</span>
-<span class="c1">#df_archive_image_retweet.dog_stage.replace(3, &#39;pupper&#39;, inplace=True)</span>
-<span class="c1">#df_archive_image_retweet.dog_stage.replace(4,&#39;puppo&#39;, inplace=True)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">dog_stage</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">dog_stage</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;floofer&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">dog_stage</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">dog_stage</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;puppo&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -15306,24 +16542,11 @@ Name: number_none, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[469]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#see if number of unique values is still the same</span>
-<span class="c1">#df_archive_image_retweet[&#39;dog_stage&#39;].value_counts()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df_archive_image_retweet.to_csv(&#39;dog_stage.csv&#39;, index=False)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#drop columns &#39;doggo&#39;, &#39;floofer&#39;, &#39;pupper&#39;, &#39;puppo&#39;</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span> <span class="s1">&#39;floofer&#39;</span><span class="p">,</span> <span class="s1">&#39;pupper&#39;</span><span class="p">,</span> <span class="s1">&#39;puppo&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -15338,6 +16561,121 @@ Name: number_none, dtype: int64</pre>
 <h4 id="Test">Test<a class="anchor-link" href="#Test">&#182;</a></h4>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[470]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#see if number of unique values is still the same</span>
+<span class="n">df_archive_image_retweet</span><span class="p">[</span><span class="s1">&#39;dog_stage&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[470]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0          1689
+pupper      208
+doggo        66
+puppo        23
+floofer       8
+Name: dog_stage, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[471]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#see if columns &#39;doggo&#39;, &#39;floofer&#39;, &#39;pupper&#39;, &#39;puppo&#39; are dropped</span>
+<span class="n">df_archive_image_retweet</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 1994 entries, 0 to 1993
+Data columns (total 27 columns):
+tweet_id                      1994 non-null int64
+in_reply_to_status_id         23 non-null float64
+in_reply_to_user_id           23 non-null float64
+timestamp                     1994 non-null datetime64[ns]
+source                        1994 non-null object
+text                          1994 non-null object
+retweeted_status_id           0 non-null float64
+retweeted_status_user_id      0 non-null float64
+retweeted_status_timestamp    0 non-null object
+expanded_urls                 1994 non-null object
+name                          1994 non-null object
+jpg_url                       1994 non-null object
+img_num                       1994 non-null int64
+p1                            1994 non-null category
+p1_conf                       1994 non-null float64
+p1_dog                        1994 non-null bool
+p2                            1994 non-null category
+p2_conf                       1994 non-null float64
+p2_dog                        1994 non-null bool
+p3                            1994 non-null category
+p3_conf                       1994 non-null float64
+p3_dog                        1994 non-null bool
+retweet_count                 1994 non-null int64
+favorite_count                1994 non-null int64
+rating                        1994 non-null float64
+number_none                   1994 non-null int64
+dog_stage                     1994 non-null object
+dtypes: bool(3), category(3), datetime64[ns](1), float64(8), int64(5), object(7)
+memory usage: 499.5+ KB
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[472]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df_archive_image_retweet.to_csv(&#39;dog_stage.csv&#39;, index=False)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
