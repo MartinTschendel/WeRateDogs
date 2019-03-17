@@ -21,5 +21,6 @@ Wrangle and Analyze the data from the Twitter WeRateDogs
 * dogs sometimes are in two dog stages
 * each variable forms a column: for dog stage, there are four columns, they should be merged to one column called 'dog_stage' (datatype: category with values: None, doggo, floofer, pupper, puppo)
 
-!! 2019-03-15: to be don amongst others:
-* 'dog_stage' (change datatype: category with values: None, doggo, floofer, pupper, puppo)
+2019-03-16: Solved the following issues:
+* changed datatype of 'dog_stage' to category
+* conducted data analytics and visualizations
