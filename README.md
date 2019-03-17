@@ -24,3 +24,6 @@ Wrangle and Analyze the data from the Twitter WeRateDogs
 2019-03-16: Solved the following issues:
 * changed datatype of 'dog_stage' to category
 * conducted data analytics and visualizations
+
+2019-03-17: Solved the following issue:
+* changed datatype of 'tweed_id' to object
