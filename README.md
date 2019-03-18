@@ -15,16 +15,16 @@ During the cleaning process, I merged the three different data frames to a maste
 
 In this project, I raised three different data analysis questions and defined one objective to visualize the data. In the following section, I raise the questions and communicate respective insights. Afterwards the data visualization will be conducted. 
  
-Regarding the Neural Network: What are the five most frequent #1 dog breed predictions of the algorithm? 
+### Regarding the Neural Network: What are the five most frequent #1 dog breed predictions of the algorithm? 
  
 The most frequent dog breed prediction is the Golden Retriever with 139 counts. It is followed by the Labrador Retriever, what was predicted 95 times. The third most frequent predicted dog breed is the Pembroke, this breed was predicted 88. The Chihuahua collected 79 counts, followed by the Pug, that breed got 54 predictions. The data frame has totally 1994 entries but dog breed predictions only sum up to 455. The algorithm predicted numerous other things on the pictures like furniture or cars. That is the reason for the difference between the numbers. 
  
-What is the maximum, average and minimum rating of these five dog breeds? 
+### What is the maximum, average and minimum rating of these five dog breeds? 
  
 Dog breed Maximum  Average Minimum Golden Retriever 14.3 1.32 0.5 Labrador Retriever 16.5 1.39 0.7 Pembroke 1.4 1.14 0.4 Chihuahua 1.4 1.07 0.3 Pug 1.3 1.02 0.3 
  
 It is unusual that the maximum ratings of the Golden Retriever and the Labrador Retriever are significantly greater than the maximum values for the three other dog breeds. The five average values don’t show big differences, therefor I assume that the big maximum values are outliers.  
  
-What are the 3 months, during which the most tweeds have been uploaded? 
+### What are the 3 months, during which the most tweeds have been uploaded? 
  
 Most of the tweets have been uploaded in January 2016 (169), November 2015 (296) and December 2015 (367). This period is also the starting point for the data collection of the Twitter WeRateDogs. 
