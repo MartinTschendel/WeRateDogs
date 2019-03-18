@@ -21,7 +21,13 @@ The most frequent dog breed prediction is the Golden Retriever with 139 counts. 
  
 ### What is the maximum, average and minimum rating of these five dog breeds? 
  
-Dog breed Maximum  Average Minimum Golden Retriever 14.3 1.32 0.5 Labrador Retriever 16.5 1.39 0.7 Pembroke 1.4 1.14 0.4 Chihuahua 1.4 1.07 0.3 Pug 1.3 1.02 0.3 
+| Dog breed          | Maximum | Average | Minimum |
+|--------------------|---------|---------|---------|
+| Golden Retriever   | 14.3    | 1.32    | 0.5     |
+| Labrador Retriever | 16.5    | 1.39    | 0.7     |
+| Pembroke           | 1.4     | 1.14    | 0.4     |
+| Chihuahua          | 1.4     | 1.07    | 0.3     |
+| Pug                | 1.3     | 1.02    | 0.3     |
  
 It is unusual that the maximum ratings of the Golden Retriever and the Labrador Retriever are significantly greater than the maximum values for the three other dog breeds. The five average values don’t show big differences, therefor I assume that the big maximum values are outliers.  
  
