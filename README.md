@@ -34,3 +34,7 @@ It is unusual that the maximum ratings of the Golden Retriever and the Labrador 
 ### What are the 3 months, during which the most tweeds have been uploaded? 
  
 Most of the tweets have been uploaded in January 2016 (169), November 2015 (296) and December 2015 (367). This period is also the starting point for the data collection of the Twitter WeRateDogs. 
+
+### Show the average favorite and retweet count for the dog stages 'doggo', 'floofer', 'pupper', 'puppo' in a bar chart 
+
+image will be uploaded soon
