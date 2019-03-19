@@ -37,4 +37,4 @@ Most of the tweets have been uploaded in January 2016 (169), November 2015 (296)
 
 ### Show the average favorite and retweet count for the dog stages 'doggo', 'floofer', 'pupper', 'puppo' in a bar chart 
 
-![bar-chart](file/D:/Udacity/Data_Analyst_ND/Part4-DataWrangling/Project/data/bar-chart-1.png)
+![bar-chart](/D:/Udacity/Data_Analyst_ND/Part4-DataWrangling/Project/data/bar-chart-1.png)
